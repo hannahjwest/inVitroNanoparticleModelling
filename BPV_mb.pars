@@ -1,0 +1,100 @@
+5	MM,*# - general switch steepness parameter
+*.. 
+*.. TUMOUR CELL PROLIFERATION 
+*.. 
+0.6	CP,* - thresh (nutrient) for PROLIF 
+*.. 
+*.. CELL DEATH 
+*.. 
+2.0	BL1,*# - max DEATH RATE (=2.0,1.3) 
+2.0	BL2,*# -     " 
+2.0	BM,*# -      " 
+0.0	MINDL1,* - min DEATH 
+0.0	MINDL2,* -   " 
+0.0	MINDM,* -    " 
+0.1	CDL1,* - thresh for DEATH (=0.2) 
+0.1	CDL2,* -     " 
+0.2	CDM,* -      " 
+*.. 
+*.. LYSIS 
+*.. 
+32.0	K1TMP,* - max LYSIS 
+32.0	K2TMP,* -    " 
+0.0	MINK1,* - min LYSIS 
+0.0	MINK2,* -    " 
+0.6	CK1,* - thresh for LYSIS 
+0.6	CK2,* -	     " 
+*.. 
+*.. NUTRIENT 
+*.. 
+0.005	BCL1,* - max NUTIENT CONSUMPTION 
+0.005	BCL2,* -     " 
+0.001	BCM,* -      " 
+0.005	BCP,*# -     "  -^^^^^^- (due to prolif) 
+0.2	CCL1,* - thresh for NUTRIENT CONSUMPTION 
+0.2	CCL2,* -     " 
+0.2	CCM,* -      " 
+*.. 
+*.. CHEMOATTRACTANT 
+*.. 
+0.0	L1A,*# - max CHEMO prodn 
+0.0	L2A,*# -     " 
+1.0	MA,*# -      " 
+0.0	MINAL1,* - min CHEMO PRODUCTION 
+0.0	MINAL2,* -   " 
+0.0	MINAM,* -    " 
+0.6	CAL1,* - thresh for CHEMO PRODUCTION 
+0.6	CAL2,* -     " 
+0.6	CAM,* -      " 
+0.0	L1AD,*# - CHEMO from DEATH 
+0.0	L2AD,*# -    " 
+0.0	MAD,*# -     " 
+0.01	DF,*# - CHEMO decay rate (=0.001) 
+*.. 
+*.. MOTILITY 
+*.. 
+20000   CHI1,* - max macrophage CHEMOTAXIS (=2000) 
+20000	CHI2,* 
+10	DMPHI1,* - max cell RANDOM motion (=10) 
+10	DMPHI2,* 
+10	DTUM,*  
+1.0	MINSP,* - min prop MOTILITY scaling (1 for no nutrient effect)  
+0.2	CSPAT,* - thresh    " 
+500	DP,* - material diffusion 
+500	DV,* - vesicle diffusion 
+*.. 
+*.. for boundary  
+*..  
+2.0	HV,* - vesicle PERMEABILITY 
+2.0	HL2,* -      " 
+10.0	L1STMP,* - surface Vesicle concn 
+0.2	L2STMP,* -   " 
+0.2	P0,* - external concn of CELLULAR MATERIAL 
+0.2	PINF, - (cell mat concn for 18hr double time) 
+0.2	PCAP or PSAT thresh for capping or reduction of growth rate 
+100	QP,* - permeability of CELLULAR MATERIAL 
+0.01	HA,* - chemoattractant PERMEABILITY 
+*.. 
+*.. plots, time, etc 
+*.. 
+1	LAMBDA,* - <1 gives compressed grid (default 0.97) 
+200	NPLOTS,* (=100) 
+13	RINIT,* 
+40	TL1,* - time to indroduce vesicles 
+100	TL2,* 
+100	TKL1,* - time to indroduce prodrug (switch on lysis) 
+100	TKL2,* 
+50	TRL1,* - time to remove vesicles  
+100	TRL2,* 
+80	TPLOT,* - final time (=100) 
+*.. 
+*.. BINDING 
+*..		 
+0.001 	UKA, - binding (0.885) 
+0.053	UKD, - dissociation (0.053) 
+882.4	UKI, - internalisation (882.4) 
+1000.0	UF0, - number of receptors (per cell)
+1000.0	UL, - no of ligands (per vesicle)
+1.0e-3	UG, death rate
+0.5D0	URHOL, proportion of available ligands to bind
+0.5D0	URHOF, proportion of available receptors to bind
